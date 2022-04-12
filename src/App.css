@@ -1,0 +1,136 @@
+/*Desktop-First*/
+
+.App{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 60px 100% 45px;
+  grid-template-areas: "header header"
+                       "nav main"
+                       "Footer Footer";
+}
+
+.Header{
+  grid-area: header;
+  background:white;
+  border: 2px solid black;
+}
+
+.Main{
+  grid-area:main;
+  
+}
+
+.Nav{
+  grid-area: nav;
+  background:#e48a2c;
+  text-align: center;
+  color:white;
+  text-decoration: solid;
+  border-left:black 2px solid;
+  border-right:black 2px solid;
+  
+}
+
+.Nav h2{
+  text-align: center;
+}
+
+.Nav ul{
+  list-style: none;
+
+}
+
+.Nav li{
+  margin-top:30px;
+  
+}
+
+.Footer{
+  background: yellow;
+  grid-area: Footer;
+  border:2px solid black;
+}
+
+/*Adaptação para Tablet*/
+
+@media screen and (max-width: 768px) {
+  .App{
+  display: flex;
+  flex-direction: column;
+  
+  }
+  .Header{
+    height:60px;
+  }
+  .Nav{
+    height:60px;
+    text-align: center;
+  }
+
+  .Nav h2{
+    display:none;
+  }
+
+  .Nav ul{
+    margin-top:0%;
+    width:100%;
+    
+
+  }
+
+  .Nav li:hover{
+    background: white;
+    color:black;
+    
+  }
+
+  .Nav li{
+    text-align: center;
+    display: inline-block;
+    margin-right: 8%;
+    
+    
+  }
+  .Main{
+    margin-top: 30px;
+    width:95%;
+    
+    
+  }
+
+  .Footer{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/*Mobille*/
+
+@media screen and (max-width: 480px) {
+  .App{
+    width:100%;
+  display: flex;
+  flex-direction: column;
+  }
+  .Header{
+    height:60px;
+  }
+  .Nav{
+    height:40px;
+    
+    
+  }
+  .Main{
+    margin-top: 20px;
+    width:100%;
+    
+    
+  }
+
+  .Footer{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
